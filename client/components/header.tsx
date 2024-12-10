@@ -132,8 +132,10 @@ const NavItem = ({ label, href, subItems }: NavItemProps) => (
 )
 
 // MobileNavItem component with dropdown toggle
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const MobileNavItem = ({ label, href, subItems }: NavItemProps) => {
   const [isOpen, setIsOpen] = useState(false)
+
 
   return (
     <div>

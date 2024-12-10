@@ -51,7 +51,7 @@ export function TestimonialsCarousel() {
             <Card className="border-none shadow-lg">
               <CardContent className="p-8">
                 <p className="text-lg mb-6 text-center italic">
-                  "{testimonials[currentIndex].text}"
+                <p>&quot;This is a testimonial&quot;</p>
                 </p>
                 <div className="text-center">
                   <p className="font-semibold">{testimonials[currentIndex].author}</p>
