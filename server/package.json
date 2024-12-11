@@ -1,16 +1,6 @@
 {
   "name": "server",
   "version": "1.0.0",
-<<<<<<< HEAD
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Guru",
-  "type": "module",
-  "license": "ISC",
-  "description": "",
-=======
   "description": "A server for the Health Connect application",
   "main": "server.js",
   "type": "module",
@@ -21,7 +11,6 @@
   },
   "author": "Guru",
   "license": "ISC",
->>>>>>> ec68f0b7be5ba58f2e614d18e3f6944f786d8b9c
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.7",
@@ -30,14 +19,13 @@
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
     "mailtrap": "^3.4.0",
+    "mongodb": "^6.12.0",
     "mongoose": "^8.8.4",
+    "nodemailer": "^6.9.16",
     "server": "file:"
   },
   "devDependencies": {
-<<<<<<< HEAD
-=======
     "@types/mongoose": "^5.11.96",
->>>>>>> ec68f0b7be5ba58f2e614d18e3f6944f786d8b9c
     "nodemon": "^3.1.7"
   }
 }
