@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
 import { useRef, useEffect, useState } from 'react'
+import Image from 'next/image'
 
 const concerns = [
   { icon: "/placeholder.svg?height=60&width=60", title: "Period doubts or Pregnancy" },
@@ -43,7 +44,7 @@ export function HealthConcerns() {
               key={index}
               className="min-w-[150px] text-center mr-4"
             >
-              <img src={item.icon} alt={item.title} className="mx-auto mb-2" />
+              <Image src={item.icon} alt={item.title} width={60} height={60} className="mx-auto mb-2" />
               <p className="text-sm mb-2">{item.title}</p>
               <Button 
                 variant="outline" 

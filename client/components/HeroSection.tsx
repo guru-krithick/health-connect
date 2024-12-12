@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const features = [
   {
@@ -39,17 +40,17 @@ export function HeroSection() {
             >
               <Link href={feature.href}>
                 <div className={`${feature.bgColor} rounded-2xl p-6 h-full transition-transform duration-300 hover:scale-105 cursor-pointer shadow-sm hover:shadow-md`}>
-                  <div className="aspect-[3/4] mb-6 overflow-hidden rounded-xl">
-                    <img 
+                    <Image 
                       src={feature.image} 
                       alt={feature.title}
-                      className="w-full h-full object-cover"
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-xl"
                     />
+                      <h2 className="text-2xl font-bold mb-2">{feature.title}</h2>
+                      <p className="text-gray-600">{feature.description}</p>
                   </div>
-                  <h2 className="text-2xl font-bold mb-2">{feature.title}</h2>
-                  <p className="text-gray-600">{feature.description}</p>
-                </div>
-              </Link>
+                </Link>
             </motion.div>
           ))}
         </div>

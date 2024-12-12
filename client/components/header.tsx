@@ -59,12 +59,18 @@ const Header = () => {
 
           {/* Desktop Buttons */}
           <div className="hidden md:flex items-center space-x-4">
+            <Link href="/login" className="text-primary hover:text-primary-dark transition-colors duration-300">
             <Button variant="ghost" className="text-primary hover:text-primary-dark hover:bg-primary-light transition-colors duration-300">
               Login
             </Button>
-            <Button className="bg-primary hover:bg-primary-dark text-white transition-colors duration-300">
+            </Link>
+            
+           <Link href="/signup" className="text-white">
+           
+           <Button className="bg-primary hover:bg-primary-dark text-white transition-colors duration-300">
               Sign Up
             </Button>
+           </Link>
           </div>
 
           {/* Mobile Hamburger Icon */}
@@ -93,9 +99,12 @@ const Header = () => {
                 {navItems.map((item) => (
                   <MobileNavItem key={item.label} {...item} />
                 ))}
+                <Link href="/login" className="text-primary hover:text-primary-dark transition-colors duration-300">
                 <Button className="w-full bg-primary text-white hover:bg-primary-dark transition-colors duration-300">
                   Login / Sign Up
                 </Button>
+                </Link>
+                
               </div>
             </div>
           </motion.div>

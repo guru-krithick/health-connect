@@ -1,5 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 
 const appointments = [
   { image: "/placeholder.svg?height=150&width=200", title: "Dentist", description: "Teething troubles? Schedule a dental checkup" },
@@ -19,8 +20,8 @@ export function AppointmentBooking() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {appointments.map((item, index) => (
           <Card key={index} className="border-none shadow-sm transition-transform duration-300 hover:scale-105">
-            <CardContent className="p-4 flex flex-col h-full">
-              <img src={item.image} alt={item.title} className="w-full h-40 object-cover mb-4 rounded" />
+            <CardContent>
+              <Image src={item.image} alt={item.title} width={200} height={150} className="w-full h-40 object-cover mb-4 rounded" />
               <h3 className="font-semibold mb-2">{item.title}</h3>
               <p className="text-sm text-gray-600 mb-4 flex-grow">{item.description}</p>
               <Button variant="outline" className="w-full mt-auto">Book Now</Button>

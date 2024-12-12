@@ -1,5 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 
 const articles = [
   {
@@ -50,8 +51,8 @@ export function ArticlesSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {articles.map((article, index) => (
           <Card key={index} className="border-none shadow-sm transition-transform duration-300 hover:scale-105">
-            <CardContent className="p-0 flex flex-col h-full">
-              <img src={article.image} alt={article.title} className="w-full h-48 object-cover" />
+            <CardContent>
+              <Image src={article.image} alt={article.title} width={300} height={200} className="w-full h-48 object-cover" />
               <div className="p-4 flex flex-col flex-grow">
                 <div className="text-sm text-primary font-semibold mb-2">{article.title}</div>
                 <h3 className="text-lg font-semibold mb-2 flex-grow">{article.description}</h3>
